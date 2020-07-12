@@ -24,7 +24,6 @@
 		A3C9239024A5F327005E4E59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9238F24A5F327005E4E59 /* Constants.swift */; };
 		A3CFCB4124A75F3300BA306E /* Liberator.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3CFCB4024A75F3300BA306E /* Liberator.ttf */; };
 		A3CFCB4324A76FF400BA306E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3CFCB4224A76FF400BA306E /* GoogleService-Info.plist */; };
-		A3D3478B24B19BC800026179 /* ExerciseVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3478A24B19BC800026179 /* ExerciseVideoVC.swift */; };
 		A3EED54724A84FD600A7632E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED54624A84FD600A7632E /* Alert.swift */; };
 		A3EED54A24A8501000A7632E /* UIViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED54924A8501000A7632E /* UIViewController+ext.swift */; };
 		A3EED54D24A8505E00A7632E /* EBAAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED54C24A8505E00A7632E /* EBAAlertVC.swift */; };
@@ -57,7 +56,6 @@
 		A3C9238F24A5F327005E4E59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3CFCB4024A75F3300BA306E /* Liberator.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Liberator.ttf; sourceTree = "<group>"; };
 		A3CFCB4224A76FF400BA306E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A3D3478A24B19BC800026179 /* ExerciseVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVideoVC.swift; sourceTree = "<group>"; };
 		A3EED54624A84FD600A7632E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A3EED54924A8501000A7632E /* UIViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ext.swift"; sourceTree = "<group>"; };
 		A3EED54C24A8505E00A7632E /* EBAAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAAlertVC.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				A35E93D324A61CD000E9D4D3 /* Authentication Screens */,
 				A3C9238824A5DC69005E4E59 /* EBATabBarController.swift */,
 				A3C9238A24A5DCDA005E4E59 /* ExercisesVC.swift */,
-				A3D3478A24B19BC800026179 /* ExerciseVideoVC.swift */,
 				A3C9238C24A5DCE3005E4E59 /* ProfileVC.swift */,
 			);
 			path = Screens;
@@ -384,7 +381,6 @@
 				A35E93CE24A617D300E9D4D3 /* EBAButton.swift in Sources */,
 				A3EED55424A8515200A7632E /* EBABodyLabel.swift in Sources */,
 				A3C9237324A5D8D2005E4E59 /* SceneDelegate.swift in Sources */,
-				A3D3478B24B19BC800026179 /* ExerciseVideoVC.swift in Sources */,
 				A3EED54724A84FD600A7632E /* Alert.swift in Sources */,
 				A3EED55924A851A600A7632E /* EBAAlertContainerView.swift in Sources */,
 				A3EED55224A8512E00A7632E /* EBATitleLabel.swift in Sources */,
