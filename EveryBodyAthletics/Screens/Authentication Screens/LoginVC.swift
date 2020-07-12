@@ -13,7 +13,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class LoginVC: EBADataLoadingVC {
-    
+    var backgroundView: UIView!
     var ebaLogo: UIImageView!
     var emailTextfield: AnimatedField!
     var passwordTextfield: AnimatedField!
@@ -31,7 +31,7 @@ class LoginVC: EBADataLoadingVC {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.isHidden = true
         configureAnimatedFieldFormat()
@@ -46,8 +46,8 @@ class LoginVC: EBADataLoadingVC {
     }
     
     func addGesture () {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(self.dismissKeyboard))
-        tap.cancelsTouchesInView = false
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = true
         view.addGestureRecognizer(tap)
     }
     

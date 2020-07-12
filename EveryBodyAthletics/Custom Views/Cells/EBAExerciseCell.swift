@@ -37,35 +37,20 @@ class EBAExerciseCell: UITableViewCell {
     }
     
     func configure () {
-        configureImageView()
         configureLabel()
     }
     
-    func configureImageView () {
-        exerciseImage = UIImageView(image: exercise.image)
-        exerciseImage.contentMode = .scaleAspectFill
-        addSubview(exerciseImage)
-        exerciseImage.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            exerciseImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            exerciseImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            exerciseImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            exerciseImage.widthAnchor.constraint(equalToConstant: 214)
-        ])
-    }
-    
     func configureLabel () {
-        label = EBATitleLabel(textAlignment: .left, fontSize: 30)
+        label = EBATitleLabel(textAlignment: .left, fontSize: 25)
         label.text = exercise.name
         label.numberOfLines = 0
         
         addSubview(label)
         
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: exerciseImage.topAnchor),
-            label.bottomAnchor.constraint(equalTo: exerciseImage.bottomAnchor),
-            label.leadingAnchor.constraint(equalTo: exerciseImage.trailingAnchor, constant: 10),
+            label.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
         ])
     }

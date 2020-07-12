@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import AVFoundation
+import AVKit
+import FirebaseStorage
 
 class ExercisesVC: EBADataLoadingVC {
 
@@ -25,6 +28,7 @@ class ExercisesVC: EBADataLoadingVC {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: Fonts.liberator, size: 16.0)!]
         self.title = "This Week's Exercises"
         configureTableView()
     }
@@ -32,7 +36,7 @@ class ExercisesVC: EBADataLoadingVC {
     func configureTableView () {
         tableView = UITableView(frame: view.bounds)
         view.addSubview(tableView)
-        tableView.rowHeight = 140
+        tableView.rowHeight = 40
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.delegate = self
         tableView.dataSource = self
@@ -57,9 +61,9 @@ class ExercisesVC: EBADataLoadingVC {
                     let name = document["name"] as! String
                     let type = document["type"] as! String
                     let videoURL = document["videoURL"] as! String
-                    let image = UIImage(named: "jumpingjack")!
                     
-                    let newExercise = Exercise(name: name, type: type, videoLink: videoURL, image: image)
+                    
+                    let newExercise = Exercise(name: name, type: type, videoLink: videoURL)
                     
                     switch type {
                     case "warmUp": self.warmUpExercises.append(newExercise)
@@ -98,7 +102,7 @@ extension ExercisesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: EBAExerciseCell.reuseID, for: indexPath) as! EBAExerciseCell
         
-        var exercise =  Exercise(name: "", type: "warmUp", videoLink: "", image: UIImage())
+        var exercise =  Exercise(name: "", type: "warmUp", videoLink: "")
         switch indexPath.section {
         case 0:
             exercise = warmUpExercises[indexPath.row]
@@ -139,14 +143,41 @@ extension ExercisesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let exerciseVideoVC = ExerciseVideoVC()
         switch indexPath.section {
-        case 0: exerciseVideoVC.exercise = warmUpExercises[indexPath.row]
-        case 1: exerciseVideoVC.exercise = circuitExercises[indexPath.row]
-        case 2: exerciseVideoVC.exercise = cooldownExercises[indexPath.row]
-        default: exerciseVideoVC.exercise = warmUpExercises[indexPath.row]
+        case 0: getVideoFile(exercise: warmUpExercises[indexPath.row])
+        case 1: getVideoFile(exercise: circuitExercises[indexPath.row])
+        case 2: getVideoFile(exercise: cooldownExercises[indexPath.row])
+        default: getVideoFile(exercise: warmUpExercises[indexPath.row])
         }
-        navigationController?.pushViewController(exerciseVideoVC, animated: true)
+        
     }
     
+    func getVideoFile (exercise: Exercise) {
+        let storage = Storage.storage()
+        let referenceUrl = "gs://everybodyathletics.appspot.com/" + exercise.videoLink
+        // Create a reference to the file you want to download
+        let gsReference = storage.reference(forURL: referenceUrl)
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        
+        // Fetch the download URL
+        gsReference.downloadURL { url, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self.playVideo(url: url!)
+            }
+        }
+        
+    }
+    
+    func playVideo (url: URL) {
+        let videoURL = url
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+        
+    }
 }

@@ -12,12 +12,10 @@ class Exercise {
     var type: String
     var name: String
     var videoLink: String
-    var image: UIImage
-    init (name: String, type: String, videoLink: String, image: UIImage) {
+    init (name: String, type: String, videoLink: String) {
         self.type = type
         self.name = name
         self.videoLink = videoLink
-        self.image = image
     }
     
     func setType (type: String) {
@@ -32,8 +30,5 @@ class Exercise {
         self.videoLink = link
     }
     
-    func setImage (image: UIImage) {
-        self.image = image
-    }
 }
 
