@@ -22,8 +22,6 @@ class EBATabBarController: UITabBarController {
         let exercisesVC = ExercisesVC()
         let boldConfiguration = UIImage.SymbolConfiguration(weight: .semibold)
         exercisesVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "list.bullet.below.rectangle", withConfiguration: boldConfiguration)?.withTintColor(Colors.red), tag: 0)
-        
-        exercisesVC.title = ""
         let exercisesNC = UINavigationController(rootViewController: exercisesVC)
         return exercisesNC
     }
@@ -33,7 +31,6 @@ class EBATabBarController: UITabBarController {
         let boldConfiguration = UIImage.SymbolConfiguration(weight: .semibold)
         let tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person", withConfiguration: boldConfiguration)?.withTintColor(Colors.red), tag: 1)
         profileVC.tabBarItem = tabBarItem
-        profileVC.title = ""
         let profileNC = UINavigationController(rootViewController: profileVC)
         return profileNC
     }

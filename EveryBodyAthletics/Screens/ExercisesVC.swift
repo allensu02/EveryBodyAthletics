@@ -29,7 +29,7 @@ class ExercisesVC: EBADataLoadingVC {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: Fonts.liberator, size: 16.0)!]
-        self.title = "This Week's Exercises"
+        title = "Hiii"
         configureTableView()
     }
     
