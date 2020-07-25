@@ -23,6 +23,7 @@ class EBATabBarController: UITabBarController {
         let boldConfiguration = UIImage.SymbolConfiguration(weight: .semibold)
         exercisesVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "list.bullet.below.rectangle", withConfiguration: boldConfiguration)?.withTintColor(Colors.red), tag: 0)
         let exercisesNC = UINavigationController(rootViewController: exercisesVC)
+
         return exercisesNC
     }
     

@@ -14,7 +14,8 @@ struct Colors {
 }
 
 struct Images {
-    static var ebaLogo = UIImage(named: "EBALogo")
+    static var ebaLogo = UIImage(named: "EBALogo")!
+    static var userIcon = UIImage(named: "Default User Icon")!
 }
 struct Icons {
     static var eyeOn = UIImage(systemName: "eye.fill")!
@@ -35,4 +36,20 @@ enum Type {
     case warmUp
     case circuit
     case coolDown
+}
+
+enum DayInWeek {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+}
+
+enum Level: String {
+    case a = "A"
+    case b = "B"
+    case c = "C"
 }

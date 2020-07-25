@@ -28,10 +28,11 @@ class EBAButton: UIButton {
     private func configure() {
         layer.cornerRadius = 10
         titleLabel?.font = UIFont(name: Fonts.liberator, size: 25)
+        titleLabel?.textAlignment = .center
         setTitleColor(.white, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
         layer.borderColor = Colors.oppositeBackground.cgColor
-        layer.borderWidth = 2
+        layer.borderWidth = 5
     }
     
     func set(backgroundColor: UIColor, title: String) {

@@ -28,16 +28,19 @@ class ExercisesVC: EBADataLoadingVC {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: Fonts.liberator, size: 16.0)!]
-        title = "Hiii"
+
+        navigationController?.navigationBar.largeTitleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: Colors.red,
+             NSAttributedString.Key.font: UIFont(name: Fonts.liberator, size: 40)]
+        navigationItem.title = "Exercises"
         configureTableView()
     }
     
     func configureTableView () {
         tableView = UITableView(frame: view.bounds)
         view.addSubview(tableView)
-        tableView.rowHeight = 40
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.rowHeight = 60
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(EBAExerciseCell.self, forCellReuseIdentifier: EBAExerciseCell.reuseID)
@@ -135,7 +138,7 @@ extension ExercisesVC: UITableViewDelegate, UITableViewDataSource {
         
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
         ])

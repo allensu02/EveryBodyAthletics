@@ -21,14 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = configureAuthenticationNC()
+        window?.rootViewController = FirstScreenVC()
         window?.makeKeyAndVisible()
     }
     
     func configureAuthenticationNC () -> UINavigationController{
-        let welcomeVC = LoginVC()
-        let welcomeNC = UINavigationController(rootViewController: welcomeVC)
-        return welcomeNC
+        let loginVC = LoginVC()
+        let loginNC = UINavigationController(rootViewController: loginVC)
+        return loginNC
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

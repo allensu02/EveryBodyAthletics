@@ -13,6 +13,10 @@
 		A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */; };
 		A35E93CE24A617D300E9D4D3 /* EBAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E93CD24A617D300E9D4D3 /* EBAButton.swift */; };
 		A35E93D224A61CC800E9D4D3 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E93D124A61CC800E9D4D3 /* RegisterVC.swift */; };
+		A3C69E7124C9E84300E03A94 /* ClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7024C9E84300E03A94 /* ClassesVC.swift */; };
+		A3C69E7324C9ED7500E03A94 /* EBAClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7224C9ED7500E03A94 /* EBAClassCell.swift */; };
+		A3C69E7524C9ED9800E03A94 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7424C9ED9800E03A94 /* Class.swift */; };
+		A3C69E7724CA703900E03A94 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7624CA703900E03A94 /* Student.swift */; };
 		A3C9237124A5D8D2005E4E59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9237024A5D8D2005E4E59 /* AppDelegate.swift */; };
 		A3C9237324A5D8D2005E4E59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9237224A5D8D2005E4E59 /* SceneDelegate.swift */; };
 		A3C9237524A5D8D2005E4E59 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9237424A5D8D2005E4E59 /* LoginVC.swift */; };
@@ -34,6 +38,8 @@
 		A3EED55924A851A600A7632E /* EBAAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED55824A851A600A7632E /* EBAAlertContainerView.swift */; };
 		A3EED55B24A8679D00A7632E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED55A24A8679D00A7632E /* Validation.swift */; };
 		A3EED55F24A8716800A7632E /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED55E24A8716800A7632E /* UIColor+ext.swift */; };
+		A3FD54DA24C8738C002F29FF /* FirstScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD54D924C8738C002F29FF /* FirstScreenVC.swift */; };
+		A3FD54DC24C92A96002F29FF /* AdminLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +49,10 @@
 		A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAExerciseCell.swift; sourceTree = "<group>"; };
 		A35E93CD24A617D300E9D4D3 /* EBAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAButton.swift; sourceTree = "<group>"; };
 		A35E93D124A61CC800E9D4D3 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		A3C69E7024C9E84300E03A94 /* ClassesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesVC.swift; sourceTree = "<group>"; };
+		A3C69E7224C9ED7500E03A94 /* EBAClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAClassCell.swift; sourceTree = "<group>"; };
+		A3C69E7424C9ED9800E03A94 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		A3C69E7624CA703900E03A94 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		A3C9236D24A5D8D2005E4E59 /* EveryBodyAthletics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryBodyAthletics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9237024A5D8D2005E4E59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C9237224A5D8D2005E4E59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +76,8 @@
 		A3EED55824A851A600A7632E /* EBAAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAAlertContainerView.swift; sourceTree = "<group>"; };
 		A3EED55A24A8679D00A7632E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A3EED55E24A8716800A7632E /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
+		A3FD54D924C8738C002F29FF /* FirstScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenVC.swift; sourceTree = "<group>"; };
+		A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginVC.swift; sourceTree = "<group>"; };
 		ACCDBB0AC21F65AE52A50B76 /* Pods-EveryBodyAthletics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBodyAthletics.debug.xcconfig"; path = "Target Support Files/Pods-EveryBodyAthletics/Pods-EveryBodyAthletics.debug.xcconfig"; sourceTree = "<group>"; };
 		C5E901AB5DA0E8D2767D8821 /* Pods-EveryBodyAthletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBodyAthletics.release.xcconfig"; path = "Target Support Files/Pods-EveryBodyAthletics/Pods-EveryBodyAthletics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				A32D35B024AD82EA00AE9FB7 /* Exercise.swift */,
+				A3C69E7424C9ED9800E03A94 /* Class.swift */,
+				A3C69E7624CA703900E03A94 /* Student.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */,
+				A3C69E7224C9ED7500E03A94 /* EBAClassCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -182,6 +197,9 @@
 		A3C9238524A5DBF6005E4E59 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A3FD54D924C8738C002F29FF /* FirstScreenVC.swift */,
+				A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */,
+				A3C69E7024C9E84300E03A94 /* ClassesVC.swift */,
 				A35E93D324A61CD000E9D4D3 /* Authentication Screens */,
 				A3C9238824A5DC69005E4E59 /* EBATabBarController.swift */,
 				A3C9238A24A5DCDA005E4E59 /* ExercisesVC.swift */,
@@ -363,6 +381,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C69E7124C9E84300E03A94 /* ClassesVC.swift in Sources */,
+				A3C69E7324C9ED7500E03A94 /* EBAClassCell.swift in Sources */,
 				A3C9238D24A5DCE3005E4E59 /* ProfileVC.swift in Sources */,
 				A3EED54A24A8501000A7632E /* UIViewController+ext.swift in Sources */,
 				A3EED55624A8516E00A7632E /* EBASecondaryLabel.swift in Sources */,
@@ -371,6 +391,7 @@
 				A32D35B124AD82EA00AE9FB7 /* Exercise.swift in Sources */,
 				A3C9237524A5D8D2005E4E59 /* LoginVC.swift in Sources */,
 				A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */,
+				A3FD54DC24C92A96002F29FF /* AdminLoginVC.swift in Sources */,
 				A3EED54D24A8505E00A7632E /* EBAAlertVC.swift in Sources */,
 				A3C9238B24A5DCDA005E4E59 /* ExercisesVC.swift in Sources */,
 				A3EED55F24A8716800A7632E /* UIColor+ext.swift in Sources */,
@@ -379,7 +400,10 @@
 				A3C9237124A5D8D2005E4E59 /* AppDelegate.swift in Sources */,
 				A3EED54F24A850A200A7632E /* UIView+ext.swift in Sources */,
 				A35E93CE24A617D300E9D4D3 /* EBAButton.swift in Sources */,
+				A3C69E7724CA703900E03A94 /* Student.swift in Sources */,
+				A3FD54DA24C8738C002F29FF /* FirstScreenVC.swift in Sources */,
 				A3EED55424A8515200A7632E /* EBABodyLabel.swift in Sources */,
+				A3C69E7524C9ED9800E03A94 /* Class.swift in Sources */,
 				A3C9237324A5D8D2005E4E59 /* SceneDelegate.swift in Sources */,
 				A3EED54724A84FD600A7632E /* Alert.swift in Sources */,
 				A3EED55924A851A600A7632E /* EBAAlertContainerView.swift in Sources */,

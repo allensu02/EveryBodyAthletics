@@ -137,7 +137,7 @@ class RegisterVC: EBADataLoadingVC {
         view.addSubview(ebaLogo)
         ebaLogo.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            ebaLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            ebaLogo.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
             ebaLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             ebaLogo.widthAnchor.constraint(equalToConstant: 300),
             ebaLogo.heightAnchor.constraint(equalToConstant: 100)
