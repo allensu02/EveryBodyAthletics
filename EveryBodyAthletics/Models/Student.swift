@@ -8,15 +8,15 @@
 
 import UIKit
 
-class Student {
+struct Student: Codable, Hashable {
     var name: String
     var physLevel: Level
     var socialLevel: Level
-    var faceImage: UIImage
+    //var faceImage: UIImage
     init (name: String, physLevel: Level, socialLevel: Level, faceImage: UIImage) {
         self.name = name
         self.physLevel = physLevel
         self.socialLevel = socialLevel
-        self.faceImage = faceImage
+        //self.faceImage = faceImage
     }
 }

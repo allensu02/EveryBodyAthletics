@@ -96,7 +96,7 @@ class AdminLoginVC: UIViewController {
             buttonStackView.topAnchor.constraint(equalTo: stationLabel.bottomAnchor, constant: 15),
             buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
-            buttonStackView.heightAnchor.constraint(equalToConstant: 120)
+            buttonStackView.heightAnchor.constraint(equalToConstant: 140)
         ])
         
     }

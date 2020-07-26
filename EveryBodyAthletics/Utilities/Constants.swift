@@ -38,17 +38,17 @@ enum Type {
     case coolDown
 }
 
-enum DayInWeek {
-    case monday
-    case tuesday
-    case wednesday
-    case thursday
-    case friday
-    case saturday
-    case sunday
+enum DayInWeek: String {
+    case monday = "Monday"
+    case tuesday = "Tuesday"
+    case wednesday = "Wednesday"
+    case thursday = "Thursday"
+    case friday = "Friday"
+    case saturday = "Saturday"
+    case sunday = "Sunday"
 }
 
-enum Level: String {
+enum Level: String, Codable {
     case a = "A"
     case b = "B"
     case c = "C"
