@@ -20,6 +20,8 @@ class FirstScreenVC: UIViewController {
         configureLogo()
         configureAtHomeButton()
         configureInClassButton()
+        
+        navigationController?.navigationBar.isHidden = true
     }
     
     func configureLogo () {
@@ -36,6 +38,7 @@ class FirstScreenVC: UIViewController {
     
     func configureAtHomeButton () {
         atHomeButton = EBAButton(backgroundColor: Colors.red, title: "At Home")
+        atHomeButton.titleLabel?.font = UIFont(name: Fonts.liberator, size: 35)
         atHomeButton.addTarget(self, action: #selector(goToAtHome), for: .touchUpInside)
         view.addSubview(atHomeButton)
         
@@ -50,6 +53,7 @@ class FirstScreenVC: UIViewController {
     
     func configureInClassButton () {
         inClassButton = EBAButton(backgroundColor: Colors.red, title: "In Class")
+        inClassButton.titleLabel?.font = UIFont(name: Fonts.liberator, size: 35)
         inClassButton.addTarget(self, action: #selector(goToInClass), for: .touchUpInside)
         view.addSubview(inClassButton)
         
@@ -64,12 +68,11 @@ class FirstScreenVC: UIViewController {
     
     @objc func goToInClass () {
         let adminLoginVC = AdminLoginVC()
-        adminLoginVC.modalPresentationStyle = .fullScreen
-        self.present(adminLoginVC, animated: true)
-        print("in class pressed")
+        //adminLoginVC.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(adminLoginVC, animated: true)
     }
     
     @objc func goToAtHome () {
-        print("at home pressed")
+        presentEBAAlertOnMainThread(title: "Coming Soon", message: "At Home Workout option is Coming Soon!", buttonTitle: "Ok")
     }
 }

@@ -34,6 +34,7 @@ class AdminLoginVC: UIViewController {
         configureGoButton()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        navigationController?.navigationBar.isHidden = false
         addGesture()
         
         
@@ -149,8 +150,23 @@ class AdminLoginVC: UIViewController {
     
     @objc func goButtonPressed () {
         let classesVC = ClassesVC()
-        classesVC.modalPresentationStyle = .fullScreen
-        present(classesVC, animated: true)
+        
+        if buttonPressed == nil {
+            presentEBAAlertOnMainThread(title: "Select Station", message: "Please select a station for the workout", buttonTitle: "Ok")
+        } else {
+            classesVC.station = buttonPressed
+            
+            navigationController?.pushViewController(classesVC, animated: true)
+            for button in stationButtons {
+                if button.backgroundColor == .black{
+                    button.backgroundColor = Colors.red
+                    button.titleLabel?.textColor = .white
+                }
+            }
+        }
+        
+        
+        
     }
     
     func configureAnimatedFieldFormat () {

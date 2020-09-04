@@ -13,10 +13,12 @@ class Class {
     var day: DayInWeek
     var time: String
     var students: [Student]
+    var docID: String
     
-    init (day: DayInWeek, time: String, students: [Student]) {
+    init (day: DayInWeek, time: String, students: [Student], docID: String) {
         self.day = day
         self.time = time
         self.students = students
+        self.docID = docID
     }
 }

@@ -21,8 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = FirstScreenVC()
+        window?.rootViewController = configureFirstNC()
         window?.makeKeyAndVisible()
+    }
+    
+    func configureFirstNC () -> UINavigationController{
+        let firstNC = UINavigationController(rootViewController: FirstScreenVC())
+        firstNC.navigationBar.tintColor = Colors.red
+        return firstNC
     }
     
     func configureAuthenticationNC () -> UINavigationController{

@@ -57,18 +57,18 @@ class LoginVC: EBADataLoadingVC {
     
     @objc func goToLogin () {
         view.endEditing(true)
-//        if validateFields() {
-//            showLoadingView()
-//            Auth.auth().signIn(withEmail: (emailTextfield.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, password: (passwordTextfield.text?.trimmingCharacters(in: .whitespacesAndNewlines))!.lowercased()) { (result, error) in
-//                self.dismissLoadingView()
-//                if let err = error {
-//                    Alert.showIncorrectAuth(on: self)
-//                    print(err.localizedDescription)
-//                } else {
-//                    self.transitionToMenu()
-//                }
-//            }
-//        }
+        if validateFields() {
+            showLoadingView()
+            Auth.auth().signIn(withEmail: (emailTextfield.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, password: (passwordTextfield.text?.trimmingCharacters(in: .whitespacesAndNewlines))!.lowercased()) { (result, error) in
+                self.dismissLoadingView()
+                if let err = error {
+                    Alert.showIncorrectAuth(on: self)
+                    print(err.localizedDescription)
+                } else {
+                    self.transitionToMenu()
+                }
+            }
+        }
         showLoadingView()
         Auth.auth().signIn(withEmail: "allenysu@gmail.com", password: "password1!") { (result, error) in
             self.dismissLoadingView()

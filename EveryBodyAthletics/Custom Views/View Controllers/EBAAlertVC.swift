@@ -9,7 +9,7 @@
 import UIKit
 
 class EBAAlertVC: UIViewController {
-    let titleLabel = EBATitleLabel(textAlignment: .center, fontSize: 20)
+    let titleLabel = EBATitleLabel(textAlignment: .center, fontSize: 50)
     let messageLabel = EBABodyLabel(textAlignment: .center)
     let actionButton = EBAButton(backgroundColor: .systemPink, title: "Ok")
     let containerView = EBAAlertContainerView()
@@ -49,8 +49,8 @@ class EBAAlertVC: UIViewController {
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            containerView.widthAnchor.constraint(equalToConstant: 280),
-            containerView.heightAnchor.constraint(equalToConstant: 220)
+            containerView.widthAnchor.constraint(equalToConstant: 560),
+            containerView.heightAnchor.constraint(equalToConstant: 400)
         ])
     }
     
@@ -60,13 +60,14 @@ class EBAAlertVC: UIViewController {
             titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
             titleLabel.leadingAnchor.constraint(equalTo:  containerView.leadingAnchor, constant: padding),
             titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-            titleLabel.heightAnchor.constraint(equalToConstant: 28)
+            titleLabel.heightAnchor.constraint(equalToConstant: 56)
         ])
         
     }
     
     func configureMessageLabel () {
         messageLabel.text = message ?? "Unable to complete request"
+        messageLabel.font = UIFont(name: Fonts.liberator, size: 30)
         messageLabel.numberOfLines = 4
         NSLayoutConstraint.activate([
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
@@ -80,12 +81,13 @@ class EBAAlertVC: UIViewController {
     
     func configureButton () {
         actionButton.setTitle(buttonTitle, for: .normal)
+        actionButton.titleLabel?.font = UIFont(name: Fonts.liberator, size: 30)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
         NSLayoutConstraint.activate([
             actionButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -padding),
             actionButton.leadingAnchor.constraint(equalTo:  containerView.leadingAnchor, constant: padding),
             actionButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-            actionButton.heightAnchor.constraint(equalToConstant: 44)
+            actionButton.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
     

@@ -56,8 +56,8 @@ class EBAClassCell: UITableViewCell {
         containerView.addSubview(timeLabel)
         NSLayoutConstraint.activate([
             timeLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 5),
-            timeLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
-            timeLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
+            timeLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
+            timeLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
             timeLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -5)
         ])
     }

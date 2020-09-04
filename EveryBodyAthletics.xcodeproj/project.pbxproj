@@ -11,14 +11,21 @@
 		A31828ED24AF437000CFEE25 /* EBADataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31828EC24AF437000CFEE25 /* EBADataLoadingVC.swift */; };
 		A32D35B124AD82EA00AE9FB7 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D35B024AD82EA00AE9FB7 /* Exercise.swift */; };
 		A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */; };
+		A35849EC24E69102007CC4B3 /* EBATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35849EB24E69102007CC4B3 /* EBATextField.swift */; };
 		A35E93CE24A617D300E9D4D3 /* EBAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E93CD24A617D300E9D4D3 /* EBAButton.swift */; };
 		A35E93D224A61CC800E9D4D3 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E93D124A61CC800E9D4D3 /* RegisterVC.swift */; };
 		A371BCB024CDC5AB003AA2B4 /* EBAStudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371BCAF24CDC5AB003AA2B4 /* EBAStudentCell.swift */; };
 		A371BCB324CDCC47003AA2B4 /* EBAProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371BCB224CDCC47003AA2B4 /* EBAProfileImageView.swift */; };
+		A37E509324E175C5006E5024 /* EditClassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509224E175C5006E5024 /* EditClassVC.swift */; };
+		A37E509524E17B05006E5024 /* EditStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509424E17B05006E5024 /* EditStudentVC.swift */; };
+		A37E509724E182FB006E5024 /* NewStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509624E182FB006E5024 /* NewStudentVC.swift */; };
+		A37E509924E291C2006E5024 /* EBAAbilityLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509824E291C2006E5024 /* EBAAbilityLevelView.swift */; };
 		A3C69E7124C9E84300E03A94 /* ClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7024C9E84300E03A94 /* ClassesVC.swift */; };
 		A3C69E7324C9ED7500E03A94 /* EBAClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7224C9ED7500E03A94 /* EBAClassCell.swift */; };
 		A3C69E7524C9ED9800E03A94 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7424C9ED9800E03A94 /* Class.swift */; };
 		A3C69E7724CA703900E03A94 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7624CA703900E03A94 /* Student.swift */; };
+		A3C70F8E24D1BB0D00E0D748 /* ConvStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C70F8D24D1BB0D00E0D748 /* ConvStartVC.swift */; };
+		A3C70F9024D1C1DB00E0D748 /* WorkoutVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C70F8F24D1C1DB00E0D748 /* WorkoutVideoVC.swift */; };
 		A3C9237124A5D8D2005E4E59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9237024A5D8D2005E4E59 /* AppDelegate.swift */; };
 		A3C9237324A5D8D2005E4E59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9237224A5D8D2005E4E59 /* SceneDelegate.swift */; };
 		A3C9237524A5D8D2005E4E59 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9237424A5D8D2005E4E59 /* LoginVC.swift */; };
@@ -50,14 +57,21 @@
 		A31828EC24AF437000CFEE25 /* EBADataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBADataLoadingVC.swift; sourceTree = "<group>"; };
 		A32D35B024AD82EA00AE9FB7 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAExerciseCell.swift; sourceTree = "<group>"; };
+		A35849EB24E69102007CC4B3 /* EBATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBATextField.swift; sourceTree = "<group>"; };
 		A35E93CD24A617D300E9D4D3 /* EBAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAButton.swift; sourceTree = "<group>"; };
 		A35E93D124A61CC800E9D4D3 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A371BCAF24CDC5AB003AA2B4 /* EBAStudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAStudentCell.swift; sourceTree = "<group>"; };
 		A371BCB224CDCC47003AA2B4 /* EBAProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAProfileImageView.swift; sourceTree = "<group>"; };
+		A37E509224E175C5006E5024 /* EditClassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditClassVC.swift; sourceTree = "<group>"; };
+		A37E509424E17B05006E5024 /* EditStudentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentVC.swift; sourceTree = "<group>"; };
+		A37E509624E182FB006E5024 /* NewStudentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStudentVC.swift; sourceTree = "<group>"; };
+		A37E509824E291C2006E5024 /* EBAAbilityLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAAbilityLevelView.swift; sourceTree = "<group>"; };
 		A3C69E7024C9E84300E03A94 /* ClassesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesVC.swift; sourceTree = "<group>"; };
 		A3C69E7224C9ED7500E03A94 /* EBAClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAClassCell.swift; sourceTree = "<group>"; };
 		A3C69E7424C9ED9800E03A94 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		A3C69E7624CA703900E03A94 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		A3C70F8D24D1BB0D00E0D748 /* ConvStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvStartVC.swift; sourceTree = "<group>"; };
+		A3C70F8F24D1C1DB00E0D748 /* WorkoutVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVideoVC.swift; sourceTree = "<group>"; };
 		A3C9236D24A5D8D2005E4E59 /* EveryBodyAthletics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryBodyAthletics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9237024A5D8D2005E4E59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C9237224A5D8D2005E4E59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +151,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A35849EA24E690F6007CC4B3 /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				A35849EB24E69102007CC4B3 /* EBATextField.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
 		A35E93D324A61CD000E9D4D3 /* Authentication Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +174,21 @@
 				A371BCB224CDCC47003AA2B4 /* EBAProfileImageView.swift */,
 			);
 			path = "Image Views";
+			sourceTree = "<group>";
+		};
+		A3A3114924D128C0004B7358 /* In Class Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */,
+				A3C69E7024C9E84300E03A94 /* ClassesVC.swift */,
+				A3E73A2B24CD8C5F00B136FD /* StudentRosterVC.swift */,
+				A37E509224E175C5006E5024 /* EditClassVC.swift */,
+				A37E509424E17B05006E5024 /* EditStudentVC.swift */,
+				A37E509624E182FB006E5024 /* NewStudentVC.swift */,
+				A3C70F8D24D1BB0D00E0D748 /* ConvStartVC.swift */,
+				A3C70F8F24D1C1DB00E0D748 /* WorkoutVideoVC.swift */,
+			);
+			path = "In Class Screens";
 			sourceTree = "<group>";
 		};
 		A3C3479024A6217B001DE24F /* Utilities */ = {
@@ -213,9 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				A3FD54D924C8738C002F29FF /* FirstScreenVC.swift */,
-				A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */,
-				A3C69E7024C9E84300E03A94 /* ClassesVC.swift */,
-				A3E73A2B24CD8C5F00B136FD /* StudentRosterVC.swift */,
+				A3A3114924D128C0004B7358 /* In Class Screens */,
 				A35E93D324A61CD000E9D4D3 /* Authentication Screens */,
 				A3C9238824A5DC69005E4E59 /* EBATabBarController.swift */,
 				A3C9238A24A5DCDA005E4E59 /* ExercisesVC.swift */,
@@ -227,6 +262,7 @@
 		A3C9238624A5DC04005E4E59 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				A35849EA24E690F6007CC4B3 /* Textfields */,
 				A371BCB124CDCC33003AA2B4 /* Image Views */,
 				A32D35B224ADFFD500AE9FB7 /* Cells */,
 				A3EED55724A8519800A7632E /* Views */,
@@ -278,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				A3EED55824A851A600A7632E /* EBAAlertContainerView.swift */,
+				A37E509824E291C2006E5024 /* EBAAbilityLevelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -405,9 +442,12 @@
 				A3EED54A24A8501000A7632E /* UIViewController+ext.swift in Sources */,
 				A371BCB324CDCC47003AA2B4 /* EBAProfileImageView.swift in Sources */,
 				A3EED55624A8516E00A7632E /* EBASecondaryLabel.swift in Sources */,
+				A37E509724E182FB006E5024 /* NewStudentVC.swift in Sources */,
 				A371BCB024CDC5AB003AA2B4 /* EBAStudentCell.swift in Sources */,
 				A3C9238924A5DC69005E4E59 /* EBATabBarController.swift in Sources */,
+				A3C70F8E24D1BB0D00E0D748 /* ConvStartVC.swift in Sources */,
 				A3EED55B24A8679D00A7632E /* Validation.swift in Sources */,
+				A3C70F9024D1C1DB00E0D748 /* WorkoutVideoVC.swift in Sources */,
 				A32D35B124AD82EA00AE9FB7 /* Exercise.swift in Sources */,
 				A3C9237524A5D8D2005E4E59 /* LoginVC.swift in Sources */,
 				A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */,
@@ -416,8 +456,10 @@
 				A3C9238B24A5DCDA005E4E59 /* ExercisesVC.swift in Sources */,
 				A3EED55F24A8716800A7632E /* UIColor+ext.swift in Sources */,
 				A3C9239024A5F327005E4E59 /* Constants.swift in Sources */,
+				A37E509924E291C2006E5024 /* EBAAbilityLevelView.swift in Sources */,
 				A31828ED24AF437000CFEE25 /* EBADataLoadingVC.swift in Sources */,
 				A3C9237124A5D8D2005E4E59 /* AppDelegate.swift in Sources */,
+				A37E509524E17B05006E5024 /* EditStudentVC.swift in Sources */,
 				A3EED54F24A850A200A7632E /* UIView+ext.swift in Sources */,
 				A35E93CE24A617D300E9D4D3 /* EBAButton.swift in Sources */,
 				A3C69E7724CA703900E03A94 /* Student.swift in Sources */,
@@ -425,10 +467,12 @@
 				A3EED55424A8515200A7632E /* EBABodyLabel.swift in Sources */,
 				A3C69E7524C9ED9800E03A94 /* Class.swift in Sources */,
 				A3C9237324A5D8D2005E4E59 /* SceneDelegate.swift in Sources */,
+				A35849EC24E69102007CC4B3 /* EBATextField.swift in Sources */,
 				A3EED54724A84FD600A7632E /* Alert.swift in Sources */,
 				A3EED55924A851A600A7632E /* EBAAlertContainerView.swift in Sources */,
 				A3EED55224A8512E00A7632E /* EBATitleLabel.swift in Sources */,
 				A35E93D224A61CC800E9D4D3 /* RegisterVC.swift in Sources */,
+				A37E509324E175C5006E5024 /* EditClassVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ class EBAStudentCell: UICollectionViewCell {
     static let reuseID = "StudentCell"
     
     let profileImageView = EBAProfileImageView(frame: .zero)
-    let usernameLabel = EBATitleLabel(textAlignment: .center, fontSize: 20)
+    let usernameLabel = EBATitleLabel(textAlignment: .center, fontSize: 35)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,7 +52,7 @@ class EBAStudentCell: UICollectionViewCell {
             usernameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 12),
             usernameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            usernameLabel.heightAnchor.constraint(equalToConstant: 20)
+            usernameLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 }
