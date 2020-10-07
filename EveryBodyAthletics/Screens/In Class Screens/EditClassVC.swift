@@ -14,7 +14,7 @@ class EditClassVC: UIViewController {
         case main
     }
     
-    var currentClass: Class!
+    var currentClass: EBAClass!
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Student>!
     var station: Int!
@@ -72,7 +72,7 @@ class EditClassVC: UIViewController {
         })
     }
     
-    func updateData (currentClass: Class) {
+    func updateData (currentClass: EBAClass) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Student>()
         snapshot.appendSections([.main])
         snapshot.appendItems(currentClass.students)
@@ -88,7 +88,7 @@ extension EditClassVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let editStudentVC = EditStudentVC()
         editStudentVC.student = currentClass.students[indexPath.item]
-       
+        editStudentVC.currentClass = currentClass
         navigationController?.pushViewController(editStudentVC, animated: true)
     }
 }

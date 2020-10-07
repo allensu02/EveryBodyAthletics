@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		610DE90D71C270AB848D4DD2 /* Pods_EveryBodyAthletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB82D1F793EC110044A4EC8 /* Pods_EveryBodyAthletics.framework */; };
 		A31828ED24AF437000CFEE25 /* EBADataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31828EC24AF437000CFEE25 /* EBADataLoadingVC.swift */; };
+		A318AD922504AEF10000FB5C /* EBAPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A318AD912504AEF10000FB5C /* EBAPlayerView.swift */; };
 		A32D35B124AD82EA00AE9FB7 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D35B024AD82EA00AE9FB7 /* Exercise.swift */; };
 		A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */; };
 		A35849EC24E69102007CC4B3 /* EBATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35849EB24E69102007CC4B3 /* EBATextField.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		4CB82D1F793EC110044A4EC8 /* Pods_EveryBodyAthletics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EveryBodyAthletics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31828EC24AF437000CFEE25 /* EBADataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBADataLoadingVC.swift; sourceTree = "<group>"; };
+		A318AD912504AEF10000FB5C /* EBAPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAPlayerView.swift; sourceTree = "<group>"; };
 		A32D35B024AD82EA00AE9FB7 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAExerciseCell.swift; sourceTree = "<group>"; };
 		A35849EB24E69102007CC4B3 /* EBATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBATextField.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			children = (
 				A3EED55824A851A600A7632E /* EBAAlertContainerView.swift */,
 				A37E509824E291C2006E5024 /* EBAAbilityLevelView.swift */,
+				A318AD912504AEF10000FB5C /* EBAPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				A3C9237524A5D8D2005E4E59 /* LoginVC.swift in Sources */,
 				A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */,
 				A3FD54DC24C92A96002F29FF /* AdminLoginVC.swift in Sources */,
+				A318AD922504AEF10000FB5C /* EBAPlayerView.swift in Sources */,
 				A3EED54D24A8505E00A7632E /* EBAAlertVC.swift in Sources */,
 				A3C9238B24A5DCDA005E4E59 /* ExercisesVC.swift in Sources */,
 				A3EED55F24A8716800A7632E /* UIColor+ext.swift in Sources */,
@@ -612,6 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39QYXNZ8BL;
 				INFOPLIST_FILE = EveryBodyAthletics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,6 +636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39QYXNZ8BL;
 				INFOPLIST_FILE = EveryBodyAthletics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

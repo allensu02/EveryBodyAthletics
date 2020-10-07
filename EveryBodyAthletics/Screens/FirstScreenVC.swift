@@ -13,6 +13,10 @@ class FirstScreenVC: UIViewController {
     var ebaLogo: UIImageView!
     var atHomeButton: EBAButton!
     var inClassButton: EBAButton!
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -21,7 +25,6 @@ class FirstScreenVC: UIViewController {
         configureAtHomeButton()
         configureInClassButton()
         
-        navigationController?.navigationBar.isHidden = true
     }
     
     func configureLogo () {

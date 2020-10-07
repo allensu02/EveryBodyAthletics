@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Class {
+class EBAClass {
     var day: DayInWeek
     var time: String
     var students: [Student]

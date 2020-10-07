@@ -10,7 +10,7 @@ import UIKit
 
 class EBAClassCell: UITableViewCell {
 
-    var cellClass: Class!
+    var cellClass: EBAClass!
     var timeLabel: EBASecondaryLabel!
     var containerView: UIView!
     
@@ -25,7 +25,7 @@ class EBAClassCell: UITableViewCell {
 
     }
     
-    func setClass (cellClass: Class) {
+    func setClass (cellClass: EBAClass) {
         self.cellClass = cellClass
         configure()
         

@@ -14,7 +14,7 @@ class StudentRosterVC: UIViewController {
         case main
     }
     
-    var currentClass: Class!
+    var currentClass: EBAClass!
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Student>!
     var station: Int!
@@ -72,7 +72,7 @@ class StudentRosterVC: UIViewController {
         })
     }
     
-    func updateData (currentClass: Class) {
+    func updateData (currentClass: EBAClass) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Student>()
         snapshot.appendSections([.main])
         snapshot.appendItems(currentClass.students)

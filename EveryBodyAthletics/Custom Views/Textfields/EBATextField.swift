@@ -40,5 +40,8 @@ class EBATextField: UITextField {
         returnKeyType = .go
     }
 
+    func setSize(size: CGFloat) {
+        font = UIFont(name: Fonts.liberator, size: size)
+    }
 }
 

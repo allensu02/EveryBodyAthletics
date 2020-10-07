@@ -8,9 +8,9 @@
 
 import UIKit
 import AnimatedField
-
+import FirebaseFirestore
 class EditStudentVC: UIViewController {
-    
+    var currentClass: EBAClass!
     var student: Student!
     var editNameLabel: EBATitleLabel!
     var nameTextfield: AnimatedField!
@@ -27,6 +27,8 @@ class EditStudentVC: UIViewController {
     var deleteButton: EBAButton!
     var saveButton: EBAButton!
     var alertVC: EBAAlertVC!
+    var classes: [[EBAClass]] = [[]]
+    var db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +59,7 @@ class EditStudentVC: UIViewController {
     @objc func dismissKeyboard () {
         view.endEditing(true)
     }
-  
+    
     func configureInitValues () {
         switch student.socialLevel.rawValue {
         case "A":
@@ -125,7 +127,10 @@ class EditStudentVC: UIViewController {
         classTextfield = EBATextField()
         
         classTextfield.inputView = classPicker
-        
+        classPicker.dataSource = self
+        classPicker.delegate = self
+        classTextfield.setSize(size: 30)
+        classTextfield.text = currentClass.time
         view.addSubview(classTextfield)
         
         NSLayoutConstraint.activate([
@@ -134,6 +139,11 @@ class EditStudentVC: UIViewController {
             classTextfield.heightAnchor.constraint(equalToConstant: 80),
             classTextfield.widthAnchor.constraint(equalToConstant: 500)
         ])
+        
+        getClasses { (returnedClasses) in
+            self.classes = returnedClasses
+            self.classPicker.reloadAllComponents()
+        }
     }
     
     func configureChangeImageButton () {
@@ -176,7 +186,7 @@ class EditStudentVC: UIViewController {
     }
     
     @objc func saveUser() {
-        storeUserInDatabase()
+        //storeUserInDatabase()
         print("User saved")
         DispatchQueue.main.async {
             self.alertVC = EBAAlertVC(title: "User Saved", message: "User Information Successfully Saved", buttonTitle: "Ok")
@@ -189,7 +199,14 @@ class EditStudentVC: UIViewController {
     }
     
     func storeUserInDatabase () {
-        print("do firebase shit")
+        let db = Firestore.firestore()
+        let newDocument = db.collection("classes").document()
+        
+        newDocument.setData(["dayOfWeek": currentClass.day.rawValue,
+                             "docID":currentClass.docID,
+                             "time":currentClass.time,
+                             "students":currentClass.students])
+        
     }
     
     @objc func deletePressed () {
@@ -197,6 +214,36 @@ class EditStudentVC: UIViewController {
     }
     
     func deleteUserFromDatabase () {
+        var updatedUsers: Array<[String: Any]>!
+        db.collection("classes").getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+            } else {
+                for document in snapshot!.documents {
+                    if (document.documentID == self.currentClass.docID) {
+                        let results = document.data()
+                        if let users = results["students"] as? Array<[String: Any]> {
+                            
+                            var index = 0
+                            for user in users {
+                                if (user["name"] as! String != self.student.name) {
+                                    index += 1
+                                } else {
+                                    break
+                                }
+                                
+                            }
+                            updatedUsers = users
+                            updatedUsers.remove(at: index)
+                        }
+                    }
+                }
+            }
+            self.db.collection("classes").document(self.currentClass.docID).setData(["dayOfWeek" : self.currentClass.day.rawValue, "docID": self.currentClass.docID, "students": updatedUsers])
+        }
+        
+        
+            
         DispatchQueue.main.async {
             self.alertVC = EBAAlertVC(title: "User Deleted", message: "User Information Successfully Deleted", buttonTitle: "Ok")
             self.alertVC.modalPresentationStyle = .overFullScreen
@@ -239,4 +286,42 @@ class EditStudentVC: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
+    
+    func getClassCount() -> Int{
+        var count = 0
+        for ebaClasses in classes {
+            for ebaClass in ebaClasses {
+                count += 1
+            }
+        }
+        return count
+    }
+}
+
+extension EditStudentVC: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return getClassCount()
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        var count = 0
+        for ebaClasses in classes {
+            for ebaClass in ebaClasses {
+                if (row == count) {
+                    return ebaClass.time
+                }
+                count += 1
+            }
+        }
+        return ""
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        classTextfield.text = classes[component][row].time
+    }
+    
 }

@@ -16,7 +16,7 @@ class WorkoutVideoVC: UIViewController {
     var exercise: Exercise!
     var student: Student!
     var finishButton: EBAButton!
-    var currentClass: Class!
+    var currentClass: EBAClass!
     var station: Int!
     var player: AVPlayer!
     var videoURL: URL!
@@ -32,8 +32,9 @@ class WorkoutVideoVC: UIViewController {
     
     func configure () {
         configureHeaderLabel()
-        configureAVPlayer()
         configureFinishButton()
+        configureAVPlayer()
+
     }
     
     func configureHeaderLabel () {
@@ -56,7 +57,7 @@ class WorkoutVideoVC: UIViewController {
         view.addSubview(finishButton)
         
         NSLayoutConstraint.activate([
-            finishButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            finishButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
             finishButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 200),
             finishButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -200),
             finishButton.heightAnchor.constraint(equalToConstant: 80)
@@ -73,12 +74,36 @@ class WorkoutVideoVC: UIViewController {
     }
 
     func configureAVPlayer() {
-        videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        player = AVPlayer(url: videoURL!)
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = CGRect(origin: self.view.bounds.origin, size: CGSize(width: view.bounds.size.width/2, height: view.bounds.size.height/2))
-        self.view.layer.addSublayer(playerLayer)
-        player.play()
+        videoURL = URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")
+        var videoPlayer = UIView(frame: .zero)
+        
+        view.addSubview(videoPlayer)
+        videoPlayer.translatesAutoresizingMaskIntoConstraints = false
+        videoPlayer.backgroundColor = .white
+        let backgroundImage = UIImageView(frame: videoPlayer.bounds)
+        backgroundImage.contentMode =  .scaleAspectFit
+        videoPlayer.insertSubview(backgroundImage, at: 0)
+        NSLayoutConstraint.activate([
+            videoPlayer.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 10),
+            videoPlayer.bottomAnchor.constraint(equalTo: finishButton.topAnchor, constant: -30),
+            videoPlayer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 200),
+            videoPlayer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -200)
+        ])
+        
+        var playerView =  EBAPlayerView()
+        videoPlayer.addSubview(playerView)
+        playerView.translatesAutoresizingMaskIntoConstraints = false
+        playerView.leadingAnchor.constraint(equalTo: videoPlayer.leadingAnchor).isActive = true
+        playerView.trailingAnchor.constraint(equalTo: videoPlayer.trailingAnchor).isActive = true
+        playerView.heightAnchor.constraint(equalTo: videoPlayer.widthAnchor, multiplier: 16/9).isActive = true
+        playerView.centerYAnchor.constraint(equalTo: videoPlayer.centerYAnchor).isActive = true
+
+        playerView.play(with: videoURL)
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        playerLayer?.frame = view.bounds
     }
 
 }

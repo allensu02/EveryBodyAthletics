@@ -10,7 +10,7 @@ import UIKit
 
 class NewStudentVC: UIViewController {
 
-    var currentClass: Class!
+    var currentClass: EBAClass!
     override func viewDidLoad() {
         super.viewDidLoad()
 

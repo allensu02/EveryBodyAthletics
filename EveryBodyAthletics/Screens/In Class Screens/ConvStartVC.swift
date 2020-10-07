@@ -14,7 +14,7 @@ class ConvStartVC: UIViewController {
     var headerLabel: EBATitleLabel!
     var questionLabel: EBATitleLabel!
     var answerButton: EBAButton!
-    var currentClass: Class!
+    var currentClass: EBAClass!
     var station: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
