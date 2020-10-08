@@ -18,14 +18,14 @@ class ClassesVC: UIViewController {
     let db = Firestore.firestore()
     var students: [Student] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateClasses()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         configureTableView()
-        getClasses { (returnedClasses) in
-            self.classes = returnedClasses
-            self.tableView.reloadData()
-        }
+        updateClasses()
     }
     
     func configure() {
@@ -54,6 +54,13 @@ class ClassesVC: UIViewController {
         tableView.register(EBAClassCell.self, forCellReuseIdentifier: EBAClassCell.reuseID)
         tableView.reloadData()
         
+    }
+    
+    func updateClasses () {
+        getClasses { (returnedClasses) in
+            self.classes = returnedClasses
+            self.tableView.reloadData()
+        }
     }
     
 }

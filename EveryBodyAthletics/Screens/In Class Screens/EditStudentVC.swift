@@ -29,6 +29,7 @@ class EditStudentVC: UIViewController {
     var alertVC: EBAAlertVC!
     var classes: [[EBAClass]] = [[]]
     var db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -186,7 +187,7 @@ class EditStudentVC: UIViewController {
     }
     
     @objc func saveUser() {
-        //storeUserInDatabase()
+        storeUserInDatabase()
         print("User saved")
         DispatchQueue.main.async {
             self.alertVC = EBAAlertVC(title: "User Saved", message: "User Information Successfully Saved", buttonTitle: "Ok")
@@ -199,14 +200,32 @@ class EditStudentVC: UIViewController {
     }
     
     func storeUserInDatabase () {
-        let db = Firestore.firestore()
-        let newDocument = db.collection("classes").document()
-        
-        newDocument.setData(["dayOfWeek": currentClass.day.rawValue,
-                             "docID":currentClass.docID,
-                             "time":currentClass.time,
-                             "students":currentClass.students])
-        
+        var updatedUsers: Array<[String: Any]>!
+        var index = 0
+        db.collection("classes").getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+            } else {
+                for document in snapshot!.documents {
+                    if (document.documentID == self.currentClass.docID) {
+                        let results = document.data()
+                        if let users = results["students"] as? Array<[String: Any]> {
+                            for user in users {
+                                if (user["name"] as! String != self.student.name) {
+                                    index += 1
+                                } else {
+                                    break
+                                }
+                            }
+                            updatedUsers = users
+                        }
+                    }
+                }
+            }
+            
+            updatedUsers[index] = ["name": self.nameTextfield.text, "pal" : self.palView.getLevel().rawValue, "sal": self.salView.getLevel().rawValue]
+            self.db.collection("classes").document(self.currentClass.docID).setData(["dayOfWeek" : self.currentClass.day.rawValue, "docID": self.currentClass.docID, "students": updatedUsers, "time" : self.currentClass.time])
+        }
     }
     
     @objc func deletePressed () {
@@ -239,11 +258,8 @@ class EditStudentVC: UIViewController {
                     }
                 }
             }
-            self.db.collection("classes").document(self.currentClass.docID).setData(["dayOfWeek" : self.currentClass.day.rawValue, "docID": self.currentClass.docID, "students": updatedUsers])
+            self.db.collection("classes").document(self.currentClass.docID).setData(["dayOfWeek" : self.currentClass.day.rawValue, "docID": self.currentClass.docID, "students": updatedUsers, "time" : self.currentClass.time])
         }
-        
-        
-            
         DispatchQueue.main.async {
             self.alertVC = EBAAlertVC(title: "User Deleted", message: "User Information Successfully Deleted", buttonTitle: "Ok")
             self.alertVC.modalPresentationStyle = .overFullScreen
@@ -256,6 +272,13 @@ class EditStudentVC: UIViewController {
     @objc func goBack () {
         alertVC.dismissVC()
         navigationController?.popViewController(animated: true)
+        if let vcs = self.navigationController?.viewControllers {
+            let previousVC = vcs[vcs.count - 2]
+            if previousVC is EditClassVC {
+                var prevVC = previousVC as? EditClassVC
+                prevVC?.updateClass()
+            }
+        }
     }
     
     func configureAnimatedFieldFormat () {

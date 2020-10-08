@@ -8,6 +8,7 @@
 
 import UIKit
 import AnimatedField
+import FirebaseFirestore
 
 class AdminLoginVC: UIViewController {
     
@@ -19,9 +20,13 @@ class AdminLoginVC: UIViewController {
     
     var adminTextfield: AnimatedField!
     var format: AnimatedFieldFormat!
-
+    
     var goButton: EBAButton!
     var buttonPressed: Int!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        buttonPressed = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +38,10 @@ class AdminLoginVC: UIViewController {
         configureAdminTextfield()
         configureGoButton()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         navigationController?.navigationBar.isHidden = false
         addGesture()
-        
-        
+//        createTestClasses()
     }
     
     func addGesture () {
@@ -192,10 +196,43 @@ class AdminLoginVC: UIViewController {
             }
         }
     }
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+    }
+    
+    func createTestClasses () {
+        var students: [Student] = []
+        var updatedUsers: Array<[String: Any]> = []
+
+        for i in 1...10 {
+            var name = "Student " + String(i)
+            var physLevel = Level.a
+            var socLevel = Level.b
+            
+            switch Int.random(in: 0..<3) {
+            case 0: physLevel = Level.a
+            case 1: physLevel = Level.b
+            case 2: physLevel = Level.c
+            default: physLevel = Level.a
+            }
+            
+            switch Int.random(in: 0..<3) {
+            case 0: socLevel = Level.a
+            case 1: socLevel = Level.b
+            case 2: socLevel = Level.c
+            default: socLevel = Level.a
+            }
+            
+            var student = Student(name: name, physLevel: physLevel, socialLevel: physLevel, faceImage: Images.userIcon)
+            students.append(student)
+            updatedUsers.append(["name" : name, "pal": physLevel.rawValue, "sal": socLevel.rawValue])
+        }
+        
+        var newClass = EBAClass(day: .monday, time: "2:45 - 3 p.m", students: students, docID: "viDgEqgcRgqRESz4IANB")
+        var db = Firestore.firestore()
+        db.collection("classes").document(newClass.docID).setData(["dayOfWeek" : newClass.day.rawValue, "docID": newClass.docID, "students": updatedUsers, "time" : newClass.time])
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class StudentRosterVC: UIViewController {
-
+    
     enum Section {
         case main
     }
@@ -19,9 +19,10 @@ class StudentRosterVC: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, Student>!
     var station: Int!
     var editButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureCollectionView()
         configureDataSource()
         configureEditButton()
@@ -29,6 +30,7 @@ class StudentRosterVC: UIViewController {
         title = "Students"
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
     func configureEditButton () {
@@ -48,7 +50,7 @@ class StudentRosterVC: UIViewController {
         collectionView.backgroundColor = .systemBackground
         collectionView.register(EBAStudentCell.self, forCellWithReuseIdentifier: EBAStudentCell.reuseID)
     }
-
+    
     func createThreeColumnFlowLayout (view: UIView) -> UICollectionViewFlowLayout {
         //calculation to find width of each item
         let width = view.bounds.width
@@ -80,6 +82,32 @@ class StudentRosterVC: UIViewController {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
         
+    }
+    
+    func updateClass () {
+        getClasses { (returnedClasses) in
+            var index = 0
+            switch self.currentClass.day {
+            case .monday: index = 0
+            case .tuesday: index = 1
+            case .wednesday: index = 2
+            case .thursday: index = 3
+            case .friday: index = 4
+            case .saturday: index = 5
+            case .sunday: index = 6
+            default: index = 0
+            }
+            for returnedClass in returnedClasses[index] {
+                if self.currentClass.time == returnedClass.time {
+                    self.currentClass = returnedClass
+                    print(self.currentClass.students)
+                    DispatchQueue.main.async {
+                        self.updateData(currentClass: self.currentClass)
+                    }
+                }
+            }
+            
+        }
     }
     
 }

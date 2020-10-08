@@ -97,4 +97,13 @@ class EBAAbilityLevelView: UIView {
         levelButtonPressed(button: buttons[button])
     }
     
+    func getLevel () -> Level{
+        switch buttonPressed {
+        case 0: return .a
+        case 1: return .b
+        case 2: return .c
+        default: return .a
+        }
+    }
+    
 }

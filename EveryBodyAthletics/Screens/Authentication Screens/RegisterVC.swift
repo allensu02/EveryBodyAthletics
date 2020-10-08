@@ -12,7 +12,7 @@ import Firebase
 import FirebaseFirestore
 import FirebaseAuth
 
-class RegisterVC: EBADataLoadingVC {
+class RegisterVC: UIViewController {
     var ebaLogo: UIImageView!
 
     var firstNameTextfield: AnimatedField!

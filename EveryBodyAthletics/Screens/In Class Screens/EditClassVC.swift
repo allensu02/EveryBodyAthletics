@@ -19,6 +19,17 @@ class EditClassVC: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, Student>!
     var station: Int!
     var editButton: UIBarButtonItem!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if let vcs = self.navigationController?.viewControllers {
+            let previousVC = vcs[vcs.count - 1]
+            if previousVC is StudentRosterVC {
+                var prevVC = previousVC as? StudentRosterVC
+                prevVC?.currentClass = currentClass
+                prevVC?.updateData(currentClass: currentClass)
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +51,7 @@ class EditClassVC: UIViewController {
         let newStudentVC = NewStudentVC()
         navigationController?.pushViewController(newStudentVC, animated: true)
     }
-   
+    
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout(view: view))
         collectionView.delegate = self
@@ -71,15 +82,39 @@ class EditClassVC: UIViewController {
             return cell
         })
     }
-    
+    func updateClass () {
+        getClasses { (returnedClasses) in
+            var index = 0
+            switch self.currentClass.day {
+            case .monday: index = 0
+            case .tuesday: index = 1
+            case .wednesday: index = 2
+            case .thursday: index = 3
+            case .friday: index = 4
+            case .saturday: index = 5
+            case .sunday: index = 6
+            default: index = 0
+            }
+            for returnedClass in returnedClasses[index] {
+                if self.currentClass.time == returnedClass.time {
+                    self.currentClass = returnedClass
+                    print(self.currentClass.students)
+                    DispatchQueue.main.async {
+                        self.updateData(currentClass: self.currentClass)
+                    }
+                }
+            }
+            
+        }
+    }
     func updateData (currentClass: EBAClass) {
+        
         var snapshot = NSDiffableDataSourceSnapshot<Section, Student>()
         snapshot.appendSections([.main])
         snapshot.appendItems(currentClass.students)
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
-        
     }
     
 }

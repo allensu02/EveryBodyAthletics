@@ -12,7 +12,7 @@ import AVFoundation
 import AVKit
 import FirebaseStorage
 
-class ExercisesVC: EBADataLoadingVC {
+class ExercisesVC: UIViewController {
 
     var tableView: UITableView!
     var sections = ["Warm Up", "Circuit", "Cooldown"]
@@ -53,7 +53,7 @@ class ExercisesVC: EBADataLoadingVC {
     }
     
     func getExercises () {
-        showLoadingView()
+        var loadingView = showLoadingView()
         self.warmUpExercises.removeAll()
         self.circuitExercises.removeAll()
         self.cooldownExercises.removeAll()
@@ -77,7 +77,7 @@ class ExercisesVC: EBADataLoadingVC {
                 }
                 
                 self.tableView.reloadData()
-                self.dismissLoadingView()
+                self.dismissLoadingView(containerView: loadingView)
             }
         }
     }
