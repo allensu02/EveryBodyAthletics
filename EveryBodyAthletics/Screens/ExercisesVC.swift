@@ -31,7 +31,7 @@ class ExercisesVC: UIViewController {
 
         navigationController?.navigationBar.largeTitleTextAttributes =
             [NSAttributedString.Key.foregroundColor: Colors.red,
-             NSAttributedString.Key.font: UIFont(name: Fonts.liberator, size: 40)]
+             NSAttributedString.Key.font: UIFont(name: Fonts.liberator, size: 40)!]
         navigationItem.title = "Exercises"
         configureTableView()
     }
@@ -53,7 +53,7 @@ class ExercisesVC: UIViewController {
     }
     
     func getExercises () {
-        var loadingView = showLoadingView()
+        let loadingView = showLoadingView()
         self.warmUpExercises.removeAll()
         self.circuitExercises.removeAll()
         self.cooldownExercises.removeAll()
@@ -103,7 +103,7 @@ extension ExercisesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: EBAExerciseCell.reuseID, for: indexPath) as! EBAExerciseCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: EBAExerciseCell.reuseID, for: indexPath) as! EBAExerciseCell
         
         var exercise =  Exercise(name: "", type: "warmUp", videoLink: "")
         switch indexPath.section {

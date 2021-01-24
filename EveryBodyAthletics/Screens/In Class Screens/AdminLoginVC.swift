@@ -41,7 +41,7 @@ class AdminLoginVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         navigationController?.navigationBar.isHidden = false
         addGesture()
-//        createTestClasses()
+        //createTestClasses()
     }
     
     func addGesture () {
@@ -208,7 +208,7 @@ class AdminLoginVC: UIViewController {
         var updatedUsers: Array<[String: Any]> = []
 
         for i in 1...10 {
-            var name = "Student " + String(i)
+            let name = "Student " + String(i)
             var physLevel = Level.a
             var socLevel = Level.b
             
@@ -226,13 +226,13 @@ class AdminLoginVC: UIViewController {
             default: socLevel = Level.a
             }
             
-            var student = Student(name: name, physLevel: physLevel, socialLevel: physLevel, faceImage: Images.userIcon)
+            let student = Student(name: name, physLevel: physLevel, socialLevel: physLevel, pfp: "test")
             students.append(student)
             updatedUsers.append(["name" : name, "pal": physLevel.rawValue, "sal": socLevel.rawValue])
         }
         
-        var newClass = EBAClass(day: .monday, time: "2:45 - 3 p.m", students: students, docID: "viDgEqgcRgqRESz4IANB")
-        var db = Firestore.firestore()
-        db.collection("classes").document(newClass.docID).setData(["dayOfWeek" : newClass.day.rawValue, "docID": newClass.docID, "students": updatedUsers, "time" : newClass.time])
+        let newClass = EBAClass(day: .monday, startTime: "2:45 p.m", endTime: "4 p.m", students: students, docID: "viDgEqgcRgqRESz4IANB")
+        let db = Firestore.firestore()
+        db.collection("classes").document(newClass.docID).setData(["dayOfWeek" : newClass.day.rawValue, "docID": newClass.docID, "students": updatedUsers, "startTime" : newClass.startTime, "endTime": newClass.endTime])
     }
 }

@@ -11,7 +11,10 @@ import UIKit
 class EBAClassCell: UITableViewCell {
 
     var cellClass: EBAClass!
-    var timeLabel: EBASecondaryLabel!
+    var startLabel: EBASecondaryLabel!
+    var endLabel: EBASecondaryLabel!
+    var studentsLabel: EBASecondaryLabel!
+
     var containerView: UIView!
     
     static let reuseID = "classCell"
@@ -44,21 +47,49 @@ class EBAClassCell: UITableViewCell {
     
     func configure () {
         configureContainerView()
-        configureTimeLabel()
+        configureStartLabel()
+        configureEndLabel()
+        configureStudentsLabel()
         
     }
     
-    func configureTimeLabel () {
-        timeLabel = EBASecondaryLabel(fontSize: 50)
-        timeLabel.font = .systemFont(ofSize: 35, weight: .black)
-        timeLabel.text = "\(cellClass.time)   Students: \(cellClass.students.count)"
-        timeLabel.textColor = .black
-        containerView.addSubview(timeLabel)
+    func configureStartLabel () {
+        startLabel = EBASecondaryLabel(fontSize: 50)
+        startLabel.font = .systemFont(ofSize: 35, weight: .black)
+        startLabel.text = "\(cellClass.startTime)"
+        startLabel.textColor = .black
+        containerView.addSubview(startLabel)
         NSLayoutConstraint.activate([
-            timeLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 5),
-            timeLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
-            timeLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-            timeLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -5)
+            startLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 5),
+            startLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
+            startLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
+            startLabel.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    func configureEndLabel () {
+        endLabel = EBASecondaryLabel(fontSize: 50)
+        endLabel.font = .systemFont(ofSize: 35, weight: .black)
+        endLabel.text = "\(cellClass.endTime)"
+        endLabel.textColor = .black
+        containerView.addSubview(endLabel)
+        NSLayoutConstraint.activate([
+            endLabel.topAnchor.constraint(equalTo: startLabel.bottomAnchor, constant: 5),
+            endLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
+            endLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
+            endLabel.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    func configureStudentsLabel () {
+        studentsLabel = EBASecondaryLabel(fontSize: 50)
+        studentsLabel.font = .systemFont(ofSize: 35, weight: .black)
+        studentsLabel.text = "\(cellClass.students.count) Athletes"
+        studentsLabel.textColor = .black
+        containerView.addSubview(studentsLabel)
+        NSLayoutConstraint.activate([
+            studentsLabel.topAnchor.constraint(equalTo: endLabel.bottomAnchor, constant: 5),
+            studentsLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
+            studentsLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
+            studentsLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 
@@ -74,8 +105,8 @@ class EBAClassCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
         

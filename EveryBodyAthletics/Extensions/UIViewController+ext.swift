@@ -9,6 +9,7 @@
 import UIKit
 import SafariServices
 import FirebaseFirestore
+import FirebaseStorage
 
 extension UIViewController {
     
@@ -16,7 +17,7 @@ extension UIViewController {
     //pop ups a loading screen
     func showLoadingView() -> UIView {
         
-        var containerView = UIView(frame: view.bounds)
+        let containerView = UIView(frame: view.bounds)
         view.addSubview(containerView)
         containerView.backgroundColor = .systemBackground
         containerView.alpha = 0
@@ -43,7 +44,7 @@ extension UIViewController {
         }
     }
     //presents an alert
-
+    
     func presentEBAAlertOnMainThread(title: String, message: String, buttonTitle: String) {
         DispatchQueue.main.async {
             let alertVC = EBAAlertVC(title: title, message: message, buttonTitle: buttonTitle)
@@ -61,11 +62,12 @@ extension UIViewController {
     }
     
     func getClasses (onCompletion: @escaping ([[EBAClass]]) -> Void) {
-        var loadingView = showLoadingView()
+        let loadingView = showLoadingView()
         let db = Firestore.firestore()
+        
         var students : [Student] = []
-        var classes: [[EBAClass]] = [[]]
-        db.collection("classes").getDocuments { (snapshot, error) in
+        var classes: [[EBAClass]] = [[], []]
+        db.collection("classes").getDocuments {[weak self] (snapshot, error) in
             if let error = error {
                 print("Error getting documents: \(error)")
             } else {
@@ -76,15 +78,16 @@ extension UIViewController {
                             let name = user["name"] as? String ?? "??"
                             let pal = user["pal"] as? String ?? "??"
                             let sal = user["sal"] as? String ?? "??"
-                            let newStudent = Student(name: name, physLevel: Level(rawValue: pal)!, socialLevel: Level(rawValue: sal)!, faceImage: Images.userIcon)
+                            var userPfp: UIImage!
+                            
+                            let newStudent = Student(name: name, physLevel: Level(rawValue: pal)!, socialLevel: Level(rawValue: sal)!, pfp: "userPfp")
                             students.append(newStudent)
                         }
                     }
                     
                     let dayOfWeek = DayInWeek(rawValue: results["dayOfWeek"] as! String)!
                     
-                    let newClass = EBAClass(day: dayOfWeek, time: results["time"] as! String, students: students, docID: results["docID"] as! String)
-                    
+                    let newClass = EBAClass(day: dayOfWeek, startTime: results["startTime"] as! String, endTime: results["endTime"] as! String, students: students, docID: results["docID"] as! String)
                     switch dayOfWeek {
                     case .monday: classes[0].append(newClass)
                     case .tuesday: classes[1].append(newClass)
@@ -95,9 +98,10 @@ extension UIViewController {
                     case .sunday: classes[6].append(newClass)
                     }
                     students = []
+                  
                 }
                 onCompletion(classes)
-                self.dismissLoadingView(containerView: loadingView)
+                self!.dismissLoadingView(containerView: loadingView)
             }
         }
     }

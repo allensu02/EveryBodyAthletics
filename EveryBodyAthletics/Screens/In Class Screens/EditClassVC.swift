@@ -24,7 +24,7 @@ class EditClassVC: UIViewController {
         if let vcs = self.navigationController?.viewControllers {
             let previousVC = vcs[vcs.count - 1]
             if previousVC is StudentRosterVC {
-                var prevVC = previousVC as? StudentRosterVC
+                let prevVC = previousVC as? StudentRosterVC
                 prevVC?.currentClass = currentClass
                 prevVC?.updateData(currentClass: currentClass)
             }
@@ -43,12 +43,13 @@ class EditClassVC: UIViewController {
     }
     
     func configureAddButton() {
-        var addButton = UIBarButtonItem(title: "Add Student", style: .done, target: self, action: #selector(addPressed))
+        let addButton = UIBarButtonItem(title: "Add Student", style: .done, target: self, action: #selector(addPressed))
         navigationItem.rightBarButtonItem = addButton
     }
     
     @objc func addPressed () {
         let newStudentVC = NewStudentVC()
+        newStudentVC.currentClass = currentClass
         navigationController?.pushViewController(newStudentVC, animated: true)
     }
     
@@ -93,10 +94,9 @@ class EditClassVC: UIViewController {
             case .friday: index = 4
             case .saturday: index = 5
             case .sunday: index = 6
-            default: index = 0
             }
             for returnedClass in returnedClasses[index] {
-                if self.currentClass.time == returnedClass.time {
+                if self.currentClass.startTime == returnedClass.startTime {
                     self.currentClass = returnedClass
                     print(self.currentClass.students)
                     DispatchQueue.main.async {
@@ -126,4 +126,4 @@ extension EditClassVC: UICollectionViewDelegate {
         editStudentVC.currentClass = currentClass
         navigationController?.pushViewController(editStudentVC, animated: true)
     }
-}
+} 

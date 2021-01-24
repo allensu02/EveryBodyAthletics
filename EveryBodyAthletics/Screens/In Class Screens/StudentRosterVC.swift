@@ -35,11 +35,13 @@ class StudentRosterVC: UIViewController {
     
     func configureEditButton () {
         editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editPressed))
+        editButton.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: Fonts.liberator, size: 30)!], for: .normal)
+        
         navigationItem.rightBarButtonItem = editButton
     }
     
     @objc func editPressed () {
-        var editClassVC = EditClassVC()
+        let editClassVC = EditClassVC()
         editClassVC.currentClass = currentClass
         navigationController?.pushViewController(editClassVC, animated: true)
     }
@@ -95,10 +97,9 @@ class StudentRosterVC: UIViewController {
             case .friday: index = 4
             case .saturday: index = 5
             case .sunday: index = 6
-            default: index = 0
             }
             for returnedClass in returnedClasses[index] {
-                if self.currentClass.time == returnedClass.time {
+                if self.currentClass.startTime == returnedClass.startTime {
                     self.currentClass = returnedClass
                     print(self.currentClass.students)
                     DispatchQueue.main.async {

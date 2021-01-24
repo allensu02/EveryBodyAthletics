@@ -11,10 +11,14 @@ import UIKit
 
 class EBAProfileImageView: UIImageView {
     
-    let placeholderImage = Images.userIcon
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
+    }
+    
+    init(pfp: UIImage) {
+        super.init(frame: .zero)
+        image = pfp
         configure()
     }
     
@@ -25,7 +29,6 @@ class EBAProfileImageView: UIImageView {
     private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
-        image = placeholderImage
         translatesAutoresizingMaskIntoConstraints = false
         
     }

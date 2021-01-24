@@ -47,8 +47,8 @@ class FirstScreenVC: UIViewController {
         
         NSLayoutConstraint.activate([
             atHomeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            atHomeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            atHomeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            atHomeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 200),
+            atHomeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -200),
             atHomeButton.heightAnchor.constraint(equalToConstant: 70)
             
         ])
@@ -62,8 +62,8 @@ class FirstScreenVC: UIViewController {
         
         NSLayoutConstraint.activate([
             inClassButton.bottomAnchor.constraint(equalTo: atHomeButton.topAnchor, constant: -20),
-            inClassButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            inClassButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            inClassButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 200),
+            inClassButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -200),
             inClassButton.heightAnchor.constraint(equalToConstant: 70)
             
         ])

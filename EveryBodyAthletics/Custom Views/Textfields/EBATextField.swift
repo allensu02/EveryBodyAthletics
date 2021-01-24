@@ -36,7 +36,6 @@ class EBATextField: UITextField {
         backgroundColor = Colors.red.withAlphaComponent(0.3)
         autocorrectionType = .no
         clearButtonMode = .whileEditing
-        placeholder = "Change Class"
         returnKeyType = .go
     }
 

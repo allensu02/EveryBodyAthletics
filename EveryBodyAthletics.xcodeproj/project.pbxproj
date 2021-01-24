@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		610DE90D71C270AB848D4DD2 /* Pods_EveryBodyAthletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB82D1F793EC110044A4EC8 /* Pods_EveryBodyAthletics.framework */; };
+		A3187C8A2572A36600BBE1A1 /* EBAWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3187C892572A36600BBE1A1 /* EBAWorkoutView.swift */; };
+		A3187C8E2572AB1000BBE1A1 /* AddWorkoutContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3187C8D2572AB1000BBE1A1 /* AddWorkoutContainerView.swift */; };
 		A318AD922504AEF10000FB5C /* EBAPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A318AD912504AEF10000FB5C /* EBAPlayerView.swift */; };
 		A32D35B124AD82EA00AE9FB7 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D35B024AD82EA00AE9FB7 /* Exercise.swift */; };
 		A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */; };
+		A342130125725E92008AA8F3 /* EBAEditStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A342130025725E92008AA8F3 /* EBAEditStudentView.swift */; };
 		A35849EC24E69102007CC4B3 /* EBATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35849EB24E69102007CC4B3 /* EBATextField.swift */; };
+		A35E38222570134B0029F9CC /* AddWorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E38212570134B0029F9CC /* AddWorkoutVC.swift */; };
+		A35E3825257013540029F9CC /* AddQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E3824257013540029F9CC /* AddQuestionVC.swift */; };
 		A35E93CE24A617D300E9D4D3 /* EBAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E93CD24A617D300E9D4D3 /* EBAButton.swift */; };
 		A35E93D224A61CC800E9D4D3 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E93D124A61CC800E9D4D3 /* RegisterVC.swift */; };
 		A371BCB024CDC5AB003AA2B4 /* EBAStudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371BCAF24CDC5AB003AA2B4 /* EBAStudentCell.swift */; };
 		A371BCB324CDCC47003AA2B4 /* EBAProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371BCB224CDCC47003AA2B4 /* EBAProfileImageView.swift */; };
 		A37E509324E175C5006E5024 /* EditClassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509224E175C5006E5024 /* EditClassVC.swift */; };
-		A37E509524E17B05006E5024 /* EditStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509424E17B05006E5024 /* EditStudentVC.swift */; };
 		A37E509724E182FB006E5024 /* NewStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509624E182FB006E5024 /* NewStudentVC.swift */; };
 		A37E509924E291C2006E5024 /* EBAAbilityLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E509824E291C2006E5024 /* EBAAbilityLevelView.swift */; };
+		A3A3B9C02566639E00DA112F /* EditStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3B9BF2566639E00DA112F /* EditStudentVC.swift */; };
 		A3C69E7124C9E84300E03A94 /* ClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7024C9E84300E03A94 /* ClassesVC.swift */; };
 		A3C69E7324C9ED7500E03A94 /* EBAClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7224C9ED7500E03A94 /* EBAClassCell.swift */; };
-		A3C69E7524C9ED9800E03A94 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7424C9ED9800E03A94 /* Class.swift */; };
+		A3C69E7524C9ED9800E03A94 /* EBAClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7424C9ED9800E03A94 /* EBAClass.swift */; };
 		A3C69E7724CA703900E03A94 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C69E7624CA703900E03A94 /* Student.swift */; };
 		A3C70F8E24D1BB0D00E0D748 /* ConvStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C70F8D24D1BB0D00E0D748 /* ConvStartVC.swift */; };
 		A3C70F9024D1C1DB00E0D748 /* WorkoutVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C70F8F24D1C1DB00E0D748 /* WorkoutVideoVC.swift */; };
@@ -35,6 +39,8 @@
 		A3C9238B24A5DCDA005E4E59 /* ExercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9238A24A5DCDA005E4E59 /* ExercisesVC.swift */; };
 		A3C9238D24A5DCE3005E4E59 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9238C24A5DCE3005E4E59 /* ProfileVC.swift */; };
 		A3C9239024A5F327005E4E59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9238F24A5F327005E4E59 /* Constants.swift */; };
+		A3CDA117257392D9002B55F6 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CDA116257392D9002B55F6 /* AddExerciseView.swift */; };
+		A3CDA11B2573A94B002B55F6 /* AddQuestionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CDA11A2573A94B002B55F6 /* AddQuestionContainerView.swift */; };
 		A3CFCB4124A75F3300BA306E /* Liberator.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3CFCB4024A75F3300BA306E /* Liberator.ttf */; };
 		A3CFCB4324A76FF400BA306E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3CFCB4224A76FF400BA306E /* GoogleService-Info.plist */; };
 		A3E73A2C24CD8C5F00B136FD /* StudentRosterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E73A2B24CD8C5F00B136FD /* StudentRosterVC.swift */; };
@@ -50,25 +56,33 @@
 		A3EED55F24A8716800A7632E /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EED55E24A8716800A7632E /* UIColor+ext.swift */; };
 		A3FD54DA24C8738C002F29FF /* FirstScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD54D924C8738C002F29FF /* FirstScreenVC.swift */; };
 		A3FD54DC24C92A96002F29FF /* AdminLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */; };
+		E7D3DBC4132D858B5857579B /* Pods_EveryBodyAthletics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63019D78CFE66A09B67713CD /* Pods_EveryBodyAthletics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4CB82D1F793EC110044A4EC8 /* Pods_EveryBodyAthletics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EveryBodyAthletics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA337F8417D72FB905C7E35 /* Pods-EveryBodyAthletics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBodyAthletics.debug.xcconfig"; path = "Target Support Files/Pods-EveryBodyAthletics/Pods-EveryBodyAthletics.debug.xcconfig"; sourceTree = "<group>"; };
+		63019D78CFE66A09B67713CD /* Pods_EveryBodyAthletics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EveryBodyAthletics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8776CCB41F0ECDE0483A8F7D /* Pods-EveryBodyAthletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBodyAthletics.release.xcconfig"; path = "Target Support Files/Pods-EveryBodyAthletics/Pods-EveryBodyAthletics.release.xcconfig"; sourceTree = "<group>"; };
+		A3187C892572A36600BBE1A1 /* EBAWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAWorkoutView.swift; sourceTree = "<group>"; };
+		A3187C8D2572AB1000BBE1A1 /* AddWorkoutContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutContainerView.swift; sourceTree = "<group>"; };
 		A318AD912504AEF10000FB5C /* EBAPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAPlayerView.swift; sourceTree = "<group>"; };
 		A32D35B024AD82EA00AE9FB7 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		A32D35B324ADFFE800AE9FB7 /* EBAExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAExerciseCell.swift; sourceTree = "<group>"; };
+		A342130025725E92008AA8F3 /* EBAEditStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAEditStudentView.swift; sourceTree = "<group>"; };
 		A35849EB24E69102007CC4B3 /* EBATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBATextField.swift; sourceTree = "<group>"; };
+		A35E38212570134B0029F9CC /* AddWorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutVC.swift; sourceTree = "<group>"; };
+		A35E3824257013540029F9CC /* AddQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionVC.swift; sourceTree = "<group>"; };
 		A35E93CD24A617D300E9D4D3 /* EBAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAButton.swift; sourceTree = "<group>"; };
 		A35E93D124A61CC800E9D4D3 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A371BCAF24CDC5AB003AA2B4 /* EBAStudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAStudentCell.swift; sourceTree = "<group>"; };
 		A371BCB224CDCC47003AA2B4 /* EBAProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAProfileImageView.swift; sourceTree = "<group>"; };
 		A37E509224E175C5006E5024 /* EditClassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditClassVC.swift; sourceTree = "<group>"; };
-		A37E509424E17B05006E5024 /* EditStudentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentVC.swift; sourceTree = "<group>"; };
 		A37E509624E182FB006E5024 /* NewStudentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStudentVC.swift; sourceTree = "<group>"; };
 		A37E509824E291C2006E5024 /* EBAAbilityLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAAbilityLevelView.swift; sourceTree = "<group>"; };
+		A3A3B9BF2566639E00DA112F /* EditStudentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditStudentVC.swift; sourceTree = "<group>"; };
 		A3C69E7024C9E84300E03A94 /* ClassesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesVC.swift; sourceTree = "<group>"; };
 		A3C69E7224C9ED7500E03A94 /* EBAClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAClassCell.swift; sourceTree = "<group>"; };
-		A3C69E7424C9ED9800E03A94 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		A3C69E7424C9ED9800E03A94 /* EBAClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAClass.swift; sourceTree = "<group>"; };
 		A3C69E7624CA703900E03A94 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		A3C70F8D24D1BB0D00E0D748 /* ConvStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvStartVC.swift; sourceTree = "<group>"; };
 		A3C70F8F24D1C1DB00E0D748 /* WorkoutVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVideoVC.swift; sourceTree = "<group>"; };
@@ -83,6 +97,8 @@
 		A3C9238A24A5DCDA005E4E59 /* ExercisesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesVC.swift; sourceTree = "<group>"; };
 		A3C9238C24A5DCE3005E4E59 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		A3C9238F24A5F327005E4E59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A3CDA116257392D9002B55F6 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		A3CDA11A2573A94B002B55F6 /* AddQuestionContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionContainerView.swift; sourceTree = "<group>"; };
 		A3CFCB4024A75F3300BA306E /* Liberator.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Liberator.ttf; sourceTree = "<group>"; };
 		A3CFCB4224A76FF400BA306E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3E73A2B24CD8C5F00B136FD /* StudentRosterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRosterVC.swift; sourceTree = "<group>"; };
@@ -98,8 +114,6 @@
 		A3EED55E24A8716800A7632E /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		A3FD54D924C8738C002F29FF /* FirstScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenVC.swift; sourceTree = "<group>"; };
 		A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginVC.swift; sourceTree = "<group>"; };
-		ACCDBB0AC21F65AE52A50B76 /* Pods-EveryBodyAthletics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBodyAthletics.debug.xcconfig"; path = "Target Support Files/Pods-EveryBodyAthletics/Pods-EveryBodyAthletics.debug.xcconfig"; sourceTree = "<group>"; };
-		C5E901AB5DA0E8D2767D8821 /* Pods-EveryBodyAthletics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBodyAthletics.release.xcconfig"; path = "Target Support Files/Pods-EveryBodyAthletics/Pods-EveryBodyAthletics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				610DE90D71C270AB848D4DD2 /* Pods_EveryBodyAthletics.framework in Frameworks */,
+				E7D3DBC4132D858B5857579B /* Pods_EveryBodyAthletics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,25 +131,17 @@
 		3D35C8F3E438DFBC50FEC449 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ACCDBB0AC21F65AE52A50B76 /* Pods-EveryBodyAthletics.debug.xcconfig */,
-				C5E901AB5DA0E8D2767D8821 /* Pods-EveryBodyAthletics.release.xcconfig */,
+				1CA337F8417D72FB905C7E35 /* Pods-EveryBodyAthletics.debug.xcconfig */,
+				8776CCB41F0ECDE0483A8F7D /* Pods-EveryBodyAthletics.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		74D80FCAC042CDDB67BC2C64 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4CB82D1F793EC110044A4EC8 /* Pods_EveryBodyAthletics.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A32D35AF24AD82E000AE9FB7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A32D35B024AD82EA00AE9FB7 /* Exercise.swift */,
-				A3C69E7424C9ED9800E03A94 /* Class.swift */,
+				A3C69E7424C9ED9800E03A94 /* EBAClass.swift */,
 				A3C69E7624CA703900E03A94 /* Student.swift */,
 			);
 			path = Models;
@@ -181,9 +187,11 @@
 			children = (
 				A3FD54DB24C92A96002F29FF /* AdminLoginVC.swift */,
 				A3C69E7024C9E84300E03A94 /* ClassesVC.swift */,
+				A35E38212570134B0029F9CC /* AddWorkoutVC.swift */,
+				A35E3824257013540029F9CC /* AddQuestionVC.swift */,
 				A3E73A2B24CD8C5F00B136FD /* StudentRosterVC.swift */,
 				A37E509224E175C5006E5024 /* EditClassVC.swift */,
-				A37E509424E17B05006E5024 /* EditStudentVC.swift */,
+				A3A3B9BF2566639E00DA112F /* EditStudentVC.swift */,
 				A37E509624E182FB006E5024 /* NewStudentVC.swift */,
 				A3C70F8D24D1BB0D00E0D748 /* ConvStartVC.swift */,
 				A3C70F8F24D1C1DB00E0D748 /* WorkoutVideoVC.swift */,
@@ -207,7 +215,7 @@
 				A3C9236F24A5D8D2005E4E59 /* EveryBodyAthletics */,
 				A3C9236E24A5D8D2005E4E59 /* Products */,
 				3D35C8F3E438DFBC50FEC449 /* Pods */,
-				74D80FCAC042CDDB67BC2C64 /* Frameworks */,
+				AFD1CFEAE4CFA622DB0254BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,8 +323,21 @@
 				A3EED55824A851A600A7632E /* EBAAlertContainerView.swift */,
 				A37E509824E291C2006E5024 /* EBAAbilityLevelView.swift */,
 				A318AD912504AEF10000FB5C /* EBAPlayerView.swift */,
+				A342130025725E92008AA8F3 /* EBAEditStudentView.swift */,
+				A3187C892572A36600BBE1A1 /* EBAWorkoutView.swift */,
+				A3CDA116257392D9002B55F6 /* AddExerciseView.swift */,
+				A3187C8D2572AB1000BBE1A1 /* AddWorkoutContainerView.swift */,
+				A3CDA11A2573A94B002B55F6 /* AddQuestionContainerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AFD1CFEAE4CFA622DB0254BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63019D78CFE66A09B67713CD /* Pods_EveryBodyAthletics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,11 +347,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3C9238124A5D8D7005E4E59 /* Build configuration list for PBXNativeTarget "EveryBodyAthletics" */;
 			buildPhases = (
-				8F34994611EF1C3DF4363870 /* [CP] Check Pods Manifest.lock */,
+				19D4A2699DB8886A23D0BDC4 /* [CP] Check Pods Manifest.lock */,
 				A3C9236924A5D8D2005E4E59 /* Sources */,
 				A3C9236A24A5D8D2005E4E59 /* Frameworks */,
 				A3C9236B24A5D8D2005E4E59 /* Resources */,
-				D201F3FC7CBB89515FC1CD03 /* [CP] Embed Pods Frameworks */,
+				C552CFE6C8A8C224C2FC8F4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,7 +410,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8F34994611EF1C3DF4363870 /* [CP] Check Pods Manifest.lock */ = {
+		19D4A2699DB8886A23D0BDC4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,7 +432,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D201F3FC7CBB89515FC1CD03 /* [CP] Embed Pods Frameworks */ = {
+		C552CFE6C8A8C224C2FC8F4D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,12 +456,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A35E3825257013540029F9CC /* AddQuestionVC.swift in Sources */,
 				A3C69E7124C9E84300E03A94 /* ClassesVC.swift in Sources */,
 				A3C69E7324C9ED7500E03A94 /* EBAClassCell.swift in Sources */,
 				A3C9238D24A5DCE3005E4E59 /* ProfileVC.swift in Sources */,
 				A3E73A2C24CD8C5F00B136FD /* StudentRosterVC.swift in Sources */,
 				A3EED54A24A8501000A7632E /* UIViewController+ext.swift in Sources */,
 				A371BCB324CDCC47003AA2B4 /* EBAProfileImageView.swift in Sources */,
+				A3CDA11B2573A94B002B55F6 /* AddQuestionContainerView.swift in Sources */,
 				A3EED55624A8516E00A7632E /* EBASecondaryLabel.swift in Sources */,
 				A37E509724E182FB006E5024 /* NewStudentVC.swift in Sources */,
 				A371BCB024CDC5AB003AA2B4 /* EBAStudentCell.swift in Sources */,
@@ -453,24 +476,29 @@
 				A32D35B424ADFFE800AE9FB7 /* EBAExerciseCell.swift in Sources */,
 				A3FD54DC24C92A96002F29FF /* AdminLoginVC.swift in Sources */,
 				A318AD922504AEF10000FB5C /* EBAPlayerView.swift in Sources */,
+				A342130125725E92008AA8F3 /* EBAEditStudentView.swift in Sources */,
 				A3EED54D24A8505E00A7632E /* EBAAlertVC.swift in Sources */,
 				A3C9238B24A5DCDA005E4E59 /* ExercisesVC.swift in Sources */,
 				A3EED55F24A8716800A7632E /* UIColor+ext.swift in Sources */,
 				A3C9239024A5F327005E4E59 /* Constants.swift in Sources */,
 				A37E509924E291C2006E5024 /* EBAAbilityLevelView.swift in Sources */,
 				A3C9237124A5D8D2005E4E59 /* AppDelegate.swift in Sources */,
-				A37E509524E17B05006E5024 /* EditStudentVC.swift in Sources */,
+				A3A3B9C02566639E00DA112F /* EditStudentVC.swift in Sources */,
+				A3187C8E2572AB1000BBE1A1 /* AddWorkoutContainerView.swift in Sources */,
 				A3EED54F24A850A200A7632E /* UIView+ext.swift in Sources */,
 				A35E93CE24A617D300E9D4D3 /* EBAButton.swift in Sources */,
+				A3187C8A2572A36600BBE1A1 /* EBAWorkoutView.swift in Sources */,
 				A3C69E7724CA703900E03A94 /* Student.swift in Sources */,
 				A3FD54DA24C8738C002F29FF /* FirstScreenVC.swift in Sources */,
 				A3EED55424A8515200A7632E /* EBABodyLabel.swift in Sources */,
-				A3C69E7524C9ED9800E03A94 /* Class.swift in Sources */,
+				A3C69E7524C9ED9800E03A94 /* EBAClass.swift in Sources */,
 				A3C9237324A5D8D2005E4E59 /* SceneDelegate.swift in Sources */,
+				A3CDA117257392D9002B55F6 /* AddExerciseView.swift in Sources */,
 				A35849EC24E69102007CC4B3 /* EBATextField.swift in Sources */,
 				A3EED54724A84FD600A7632E /* Alert.swift in Sources */,
 				A3EED55924A851A600A7632E /* EBAAlertContainerView.swift in Sources */,
 				A3EED55224A8512E00A7632E /* EBATitleLabel.swift in Sources */,
+				A35E38222570134B0029F9CC /* AddWorkoutVC.swift in Sources */,
 				A35E93D224A61CC800E9D4D3 /* RegisterVC.swift in Sources */,
 				A37E509324E175C5006E5024 /* EditClassVC.swift in Sources */,
 			);
@@ -606,7 +634,7 @@
 		};
 		A3C9238224A5D8D7005E4E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACCDBB0AC21F65AE52A50B76 /* Pods-EveryBodyAthletics.debug.xcconfig */;
+			baseConfigurationReference = 1CA337F8417D72FB905C7E35 /* Pods-EveryBodyAthletics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,7 +654,7 @@
 		};
 		A3C9238324A5D8D7005E4E59 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5E901AB5DA0E8D2767D8821 /* Pods-EveryBodyAthletics.release.xcconfig */;
+			baseConfigurationReference = 8776CCB41F0ECDE0483A8F7D /* Pods-EveryBodyAthletics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

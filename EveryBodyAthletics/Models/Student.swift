@@ -12,11 +12,21 @@ struct Student: Hashable {
     var name: String
     var physLevel: Level
     var socialLevel: Level
-    //var faceImage: UIImage!
-    init (name: String, physLevel: Level, socialLevel: Level, faceImage: UIImage) {
+    var pfp: String!
+    init (name: String, physLevel: Level, socialLevel: Level, pfp: String) {
         self.name = name
         self.physLevel = physLevel
         self.socialLevel = socialLevel
-        //self.faceImage = faceImage
+        self.pfp = pfp
+    }
+    
+    static func convertStudentsToArray (students: [Student]) -> Array<[String: Any]> {
+        var convertedArray: Array<[String: Any]> = []
+        for student in students {
+            let convertedStudent = ["name": student.name, "pal": student.physLevel.rawValue, "sal": student.socialLevel.rawValue] as [String : Any]
+            convertedArray.append(convertedStudent)
+        }
+        
+        return convertedArray
     }
 }

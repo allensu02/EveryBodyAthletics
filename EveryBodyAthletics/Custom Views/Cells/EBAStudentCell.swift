@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import FirebaseStorage
 class EBAStudentCell: UICollectionViewCell {
     static let reuseID = "StudentCell"
     
-    let profileImageView = EBAProfileImageView(frame: .zero)
+    var profileImageView = EBAProfileImageView(frame: .zero)
     let usernameLabel = EBATitleLabel(textAlignment: .center, fontSize: 35)
     
     override init(frame: CGRect) {
@@ -26,7 +26,23 @@ class EBAStudentCell: UICollectionViewCell {
     func set(student: Student) {
         usernameLabel.textColor = .black
         usernameLabel.text = student.name
+        getImage { (image) in
+            self.profileImageView.image = image
+        }
         configure()
+    }
+    
+    func getImage(onCompletion: @escaping (UIImage) -> Void) {
+        let storageRef = Storage.storage().reference(withPath: "defaultGuyIcon.png")
+        storageRef.getData(maxSize: 4 * 1024 * 1024) { (data, error) in
+            if let error = error {
+                print("got error \(error.localizedDescription)")
+                return
+            }
+            if let data = data {
+                onCompletion(UIImage(data: data)!)
+            }
+        }
     }
     
     private func configure() {
